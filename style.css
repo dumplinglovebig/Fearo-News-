@@ -1,0 +1,117 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: rgb(43, 35, 49);
+    color: aliceblue;
+}
+header {
+    background-color: rgba(101, 69, 134, 0.74);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.newsfirst {
+    margin: 3% 0 0 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.newsfirst h1, a {
+    font-size: 35px;
+    color: rgb(134, 181, 243);
+    text-decoration: none;
+}
+.newsfirst img {
+    border-radius: 8px;
+}
+.bignews {
+    font-family: 'Courier New', monospace !important;
+    background-color: rgb(43, 35, 49);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+}
+.bignews h1 {
+    font-family: 'Courier New', monospace !important;
+    background-color: rgb(43, 35, 49);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+}
+.notnews {
+    margin: 3% 0 0 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.notnews h1,a {
+    font-size: 35px;
+    color: rgb(134, 181, 243);
+    text-decoration: none;
+}
+
+.notnews img {
+    border-radius: 8px;
+    width: 1200px;
+}
+.tallnews {
+    font-family: 'Courier New', monospace;
+    background-color: rgb(43, 35, 49);
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.dignews img {
+    border-radius: 8px;
+    width: 1200px;
+}
+.dignews {
+    margin: 3% 0 0 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    
+}
+.dignews h1 {
+    font-size: 35px;
+}
+.notgaynews {
+    font-family: 'Courier New', monospace;
+    background-color: rgb(43, 35, 49);
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}

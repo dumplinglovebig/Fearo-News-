@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="notgaynews">
+        UEFI Secure Boot Vulnerability (CVE-2024-7344)
+A vulnerability (CVE-2024-7344, CVSS 6.7) was discovered in UEFI systems, allowing attackers to bypass Secure Boot protections and execute unsigned code during system startup. This issue has since been patched.
+<br>
+<br>
+Key Details:
+Cause: The flaw originated from certain UEFI applications using a custom PE loader instead of secure UEFI functions like LoadImage and StartImage. This allowed malicious binaries to be loaded from a specially crafted file (cloak.dat), bypassing Secure Boot, even if it was enabled.
+<br>
+<br>
+Impact: Successful exploitation permitted attackers to:
+<br>
+<br>
+Deploy malicious UEFI bootkits.
+Gain persistent and covert access, surviving reboots and OS reinstalls.
+Evade detection by OS-based security tools, including EDR solutions.
+Affected Products: Several recovery software suites were vulnerable, including:
+<br>
+<br>
+Howyar SysReturn (before 10.2.023_20240919)
+Greenware GreenGuard (before 10.2.023-20240927)
+Radix SmartRecovery (before 11.2.023-20240927)
+Sanfong EZ-back System (before 10.3.024-20241127)
+WASAY eRecoveryRX (before 8.4.022-20241127)
+CES NeoImpact (before 10.1.024-20241127)
+SignalComputer HDD King (before 10.3.021-20241127).
+Exploitation:
+Attackers could exploit the vulnerability by:
+<br>
+<br>
+Using the affected UEFI binaries (reloader.efi) with Microsoft’s third-party UEFI certificate.
+Deploying the malicious files to the EFI partition, which required elevated privileges (administrator on Windows, root on Linux).
+Mitigation Steps:
+Patches Applied: Vulnerable products were updated, and Microsoft revoked unsafe binaries as part of the January 14, 2025 Patch Tuesday update.
+Additional Protections:
+Regular UEFI revocation management.
+Restrict access to the EFI partition.
+Customize Secure Boot configurations.
+Implement remote attestation with a Trusted Platform Module (TPM).
+Concerns and Insights:
+ESET researchers noted that:
+<br>
+<br>
+The discovery of insecure, signed UEFI binaries raises concerns about vendor practices and the prevalence of similar flaws.
+The timeliness of fixes was commendable, but it highlights that Secure Boot alone isn’t an impenetrable defense.
+    </div>
+</body>
+</html>

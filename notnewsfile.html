@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tallnews">
+        NTLMv1 Group Policy Bypass Found
+Researchers discovered that NTLMv1, a legacy Windows authentication protocol, can bypass Active Directory Group Policy due to misconfigurations in on-premises applications.
+<br>
+<br>
+Key Points:
+NTLMv1 Deprecated: Officially removed in Windows 11 (24H2) and Server 2025.
+Bypass Mechanism: Misconfigured Netlogon Remote Protocol settings can override Group Policy meant to block NTLMv1.
+Impact: Allows attackers to exploit NTLMv1 vulnerabilities despite policy protections.
+Mitigation: Enable NTLM audit logs, identify vulnerable apps, and ensure systems are up-to-date.
+<br>
+<br>
+<br>
+<br>
+NTLMv1 Group Policy Bypass Revealed
+Researchers have identified a way to bypass Microsoft's Group Policy designed to disable NTLMv1 authentication, exposing organizations to potential attacks through misconfigured on-premises applications.
+<br>
+<br>
+NTLMv1 Deprecated: Although officially removed in Windows 11 (24H2) and Server 2025, NTLMv1 remains exploitable due to legacy support and misconfigurations.
+The Bypass: A setting in the Netlogon Remote Protocol (MS-NRPC) allows NTLMv1 authentication through the NETLOGON_LOGON_IDENTITY_INFO structure, overriding Group Policy settings.
+Attacker Advantage: This flaw enables threat actors to exploit NTLMv1 vulnerabilities, such as relaying authentication information to gain unauthorized access to sensitive data or perform malicious actions on behalf of victims.
+Recommendations:
+Enable audit logs for all NTLM authentication in the domain.
+Regularly review applications to identify those misconfigured to allow NTLMv1.
+Keep systems up-to-date and apply stricter authentication protocols like NTLMv2 or Kerberos.
+
+    </div>
+</body>
+</html>
