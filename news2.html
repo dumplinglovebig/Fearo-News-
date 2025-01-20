@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1> Cybersecurity researchers have detailed a new adversary-in-the-middle (AitM) phishing kit that's capable of Microsoft 365 accounts with an aim to steal credentials and two-factor authentication (2FA) codes since at least October 2024.
+<br>
+<br>
+The nascent phishing kit has been dubbed Sneaky 2FA by French cybersecurity company Sekoia, which detected it in the wild in December. Nearly 100 domains hosting Sneaky 2FA phishing pages have been identified as of this month, suggesting moderate adoption by threat actors.
+<br>
+<br>
+"This kit is being sold as phishing-as-a-service (PhaaS) by the cybercrime service 'Sneaky Log,' which operates through a fully-featured bot on Telegram," the company said in an analysis. "Customers reportedly receive access to a licensed obfuscated version of the source code and deploy it independently."
+<br>
+<br>
+Phishing campaigns have been observed sending payment receipt-related emails to entice recipients into opening bogus PDF documents containing QR code that, upon scanning, redirects them to Sneaky 2FA pages.
+<br>
+<br>
+Cybersecurity
+Sekoia said the phishing pages are hosted on compromised infrastructure, mostly involving WordPress websites and other domains controlled by the attacker. The fake authentication pages are designed to automatically populate the victim's email address to elevate their legitimacy.
+<br>
+<br>
+The kit also boasts of several anti-bot and anti-analysis measures, employing techniques like traffic filtering and Cloudflare Turnstile challenges to ensure that only victims who meet certain criteria are directed to the credential harvesting pages. It further runs a series of checks to detect and resist analysis attempts using web browser developer tools.
+nr
+<br>
+<br>
+A notable aspect of the PhaaS is that site visitors whose IP address originates from a data center, cloud provider, bot, proxy, or VPN are directed to a Microsoft-related Wikipedia page using the href[.]li redirection service. This behavior has led TRAC Labs to give it the name WikiKit.
+<br>
+<br>
+"The Sneaky 2FA phishing kit employs several blurred images as the background for its fake Microsoft authentication pages," Sekoia explained. "By using screenshots of legitimate Microsoft interfaces, this tactic is intended to deceive users into authenticating themselves to gain access to the blurred content."
+<br>
+<br>
+Further investigation has revealed that the phishing kit relies on a check with a central server, likely the operator, that makes sure that the subscription is active. This indicates that only customers with a valid license key can use Sneaky 2FA to conduct phishing campaigns. The kit is advertised for $200 per month.
+<br>
+<br>
+That's not all. Source code references have also been unearthed pointing to a phishing syndicate named W3LL Store, which was previously exposed by Group-IB in September 2023 as behind a phishing kit called W3LL Panel and various tools for conducting business email compromise (BEC) attacks.
+<br>
+<br>
+This, along with similarities in the AitM relay implementation, has also raised the possibility that Sneaky 2FA may be based on the W3LL Panel. The latter also operates under a similar licensing model that requires periodic checks with a central server.
+<br>
+<br>
+Cybersecurity
+Sekoia researcher Grégoire Clermont told The Hacker News that despite these overlaps, Sneaky 2FA cannot be considered a successor to W3LL Panel, as the threat actors behind the latter are still actively developing and selling their own phishing kit.
+<br>
+<br>
+"Sneaky 2FA is a new kit that reused a few bits of code from W3LL OV6," Clermont said. "That source code is not very difficult to obtain as customers of the service receive an archive of obfuscated code to host on their own servers. Several desobfuscated/cracked versions of W3LL have been circulated in the past years."
+<br>
+<br>
+In an interesting twist, some of the Sneaky 2FA domains were previously associated with known AitM phishing kits, such as Evilginx2 and Greatness – an indication that at least a few cyber criminals have migrated to the new service.
+<br>
+<br>
+"The phishing kit uses different hardcoded User-Agent strings for the HTTP requests depending on the step of the authentication flow," Sekoia researchers said. "This behavior is rare in legitimate user authentication, as a user would have to perform successive steps of the authentication from different web browsers."
+<br>
+<br>
+"While User-Agent transitions occasionally happen in legitimate situations (e.g., authentication initiated in desktop applications that launch a web browser or WebView to handle MFA), the specific sequence of User-Agents used by Sneaky 2FA does not correspond to a realistic scenario, and offers a high-fidelity detection of the kit."</h1> 
+</body>
+</html>
